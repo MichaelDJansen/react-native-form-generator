@@ -22,8 +22,8 @@ export class LinkField extends React.Component{
 
 let formStyles = StyleSheet.create({
   fieldContainer:{
-    borderBottomWidth: 1,
-    borderBottomColor: '#C8C7CC',
+    // borderBottomWidth: 1,
+    // borderBottomColor: '#C8C7CC',
     backgroundColor: 'white',
     justifyContent: 'center',
     height: 45

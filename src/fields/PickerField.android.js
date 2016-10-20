@@ -33,8 +33,8 @@ export class PickerField extends React.Component{
 
       let formStyles = StyleSheet.create({
         fieldContainer:{
-          borderBottomWidth: 1,
-          borderBottomColor: '#C8C7CC',
+          // borderBottomWidth: 1,
+          // borderBottomColor: '#C8C7CC',
           backgroundColor: 'white',
           justifyContent: 'center',
           height: 45
@@ -53,8 +53,8 @@ export class PickerField extends React.Component{
           // borderTopColor: '#C8C7CC',
           // borderTopWidth: 1,
           paddingTop: 35,
-          borderBottomColor: '#C8C7CC',
-          borderBottomWidth: 1,
+          // borderBottomColor: '#C8C7CC',
+          // borderBottomWidth: 1,
 
         },
         separator:{
