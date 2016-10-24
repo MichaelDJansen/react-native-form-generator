@@ -72,8 +72,8 @@ let formStyles = StyleSheet.create({
     // borderTopColor: '#C8C7CC',
     // borderTopWidth: 1,
     paddingTop: 35,
-    // borderBottomColor: '#C8C7CC',
-    // borderBottomWidth: 1,
+    borderBottomColor: '#C8C7CC',
+    borderBottomWidth: 1,
 
   },
 
@@ -87,8 +87,8 @@ let formStyles = StyleSheet.create({
     justifyContent: 'flex-start'
   },
   fieldContainer:{
-    // borderBottomWidth: 1,
-    // borderBottomColor: '#C8C7CC',
+    borderBottomWidth: 1,
+    borderBottomColor: '#C8C7CC',
     backgroundColor: 'white',
     justifyContent: 'center',
   },
