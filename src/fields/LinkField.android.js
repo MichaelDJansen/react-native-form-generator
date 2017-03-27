@@ -6,6 +6,9 @@ import {LinkComponent} from '../lib/LinkComponent';
 
 
 export class LinkField extends React.Component{
+    shouldComponentUpdate(nextProps, nextState) {
+    return this.props !== nextProps || this.state !== nextState
+  }
   render(){
     return(<LinkComponent
        {...this.props}

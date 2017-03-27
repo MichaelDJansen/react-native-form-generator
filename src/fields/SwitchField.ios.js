@@ -9,6 +9,9 @@ export class SwitchField extends React.Component{
   setValue(value){
     this.refs.fieldComponent.setValue(value)
   }
+  shouldComponentUpdate(nextProps, nextState) {
+    return this.props !== nextProps || this.state !== nextState
+  }
   render(){
 
     return(<SwitchComponent

@@ -47,6 +47,10 @@ export class DatePickerComponent extends React.Component{
     this.props.onPress && this.props.onPress(event);
   }
 
+  shouldComponentUpdate(nextProps, nextState) {
+    return this.props !== nextProps || this.state !== nextState
+  }
+
   render(){
     let { maximumDate,    minimumDate,
           minuteInterval, mode,

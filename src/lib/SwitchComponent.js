@@ -31,6 +31,10 @@ export class SwitchComponent extends React.Component{
     if(this.props.onValueChange) this.props.onValueChange(value);
   }
 
+    shouldComponentUpdate(nextProps, nextState) {
+    return this.props !== nextProps || this.state !== nextState
+  }
+
 
   render(){
 

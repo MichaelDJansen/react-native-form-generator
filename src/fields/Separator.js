@@ -4,6 +4,9 @@ import React from 'react';
 let { View, StyleSheet, Text} = require('react-native');
 
 export class Separator extends React.Component{
+  shouldComponentUpdate(nextProps, nextState) {
+    return this.props !== nextProps || this.state !== nextState
+  }
   render(){
      return(<View style={[formStyles.separatorContainer, this.props.containerStyle]}>
        {

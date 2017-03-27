@@ -11,6 +11,11 @@ export class DatePickerField extends React.Component{
   setDate(date){
     this.refs.datePickerComponent.setDate(date);
   }
+
+  shouldComponentUpdate(nextProps, nextState) {
+    return this.props !== nextProps || this.state !== nextState
+  }
+  
   render(){
     return(<DatePickerComponent
       {...this.props}

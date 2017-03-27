@@ -18,6 +18,10 @@ export class LinkComponent extends React.Component{
     //e.nativeEvent.layout: {x, y, width, height}}}.
   }
 
+  shouldComponentUpdate(nextProps, nextState) {
+    return this.props !== nextProps || this.state !== nextState
+  }
+
 
   render(){
     return(<Field {...this.props}>

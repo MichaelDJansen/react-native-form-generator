@@ -53,6 +53,10 @@ var PickerItem = Picker.Item;
         //this.setState({isPickerVisible:!this.state.isPickerVisible});
         //this._scrollToInput(event);
     }
+
+   shouldComponentUpdate(nextProps, nextState) {
+    return this.props !== nextProps || this.state !== nextState
+   }
     render(){
 
       return(<View><Field

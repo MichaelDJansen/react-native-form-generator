@@ -5,6 +5,11 @@ import {HelpText} from './HelpText';
 let { View, StyleSheet, Text, TouchableHighlight} = require('react-native');
 
 export class Field extends React.Component{
+
+  shouldComponentUpdate(nextProps, nextState) {
+    return this.props !== nextProps || this.state !== nextState
+  }
+
   render(){
     let fieldHelpText =
       this.props.helpTextComponent

@@ -17,6 +17,10 @@ export class Form extends React.Component{
 
   }
 
+  shouldComponentUpdate(nextProps, nextState) {
+    return this.props !== nextProps || this.state !== nextState
+  }
+
   handleFieldFocused(event, inputHandle){
     this.props.onFocus && this.props.onFocus(event, inputHandle);
   }
@@ -36,6 +40,10 @@ export class Form extends React.Component{
     })
 
     return res.join(' ');
+  }
+
+    shouldComponentUpdate(nextProps, nextState) {
+    return this.props !== nextProps || this.state !== nextState
   }
 
   render(){

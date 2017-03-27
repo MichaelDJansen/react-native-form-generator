@@ -57,6 +57,10 @@ export class KeyboardAwareScrollView extends React.Component {
     }, 220)
   }
 
+    shouldComponentUpdate(nextProps, nextState) {
+    return this.props !== nextProps || this.state !== nextState
+  }
+
   render () {
     return (
       <ScrollView

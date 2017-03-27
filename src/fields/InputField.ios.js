@@ -17,6 +17,9 @@ export class InputField extends React.Component{
   focus(){
     this.refs.fieldComponent.focus()
   }
+  shouldComponentUpdate(nextProps, nextState) {
+    return this.props !== nextProps || this.state !== nextState
+  }
   render(){
     return(<InputComponent
       {...this.props}

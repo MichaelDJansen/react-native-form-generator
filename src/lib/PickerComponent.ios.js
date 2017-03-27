@@ -55,6 +55,11 @@ export class PickerComponent extends React.Component{
         this.props.onPress && this.props.onPress(event);
         //this._scrollToInput(event);
     }
+
+      shouldComponentUpdate(nextProps, nextState) {
+    return this.props !== nextProps || this.state !== nextState
+  }
+  
     render(){
       //
       // if (this.state.isMultipleSelect){

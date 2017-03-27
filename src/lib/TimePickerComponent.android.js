@@ -52,6 +52,11 @@ import {Field} from './Field';
 
 
     }
+
+      shouldComponentUpdate(nextProps, nextState) {
+    return this.props !== nextProps || this.state !== nextState
+  }
+  
     render(){
       let timeValue =this.props.dateTimeFormat(this.state.date);
       let placeholderComponent = (this.props.placeholderComponent)

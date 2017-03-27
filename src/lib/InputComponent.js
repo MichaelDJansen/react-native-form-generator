@@ -139,6 +139,11 @@ export class InputComponent extends React.Component{
   handleFieldPress(event){
     this.refs.inputBox.focus();
   }
+
+  shouldComponentUpdate(nextProps, nextState) {
+    return this.props !== nextProps || this.state !== nextState
+  }
+
   render(){
  // style={[formStyles.fieldContainer,
  //     formStyles.horizontalContainer,

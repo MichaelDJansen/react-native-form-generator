@@ -55,6 +55,10 @@ import {Field} from './Field';
       }
       this.props.onPress && this.props.onPress(event);
     }
+
+  shouldComponentUpdate(nextProps, nextState) {
+    return this.props !== nextProps || this.state !== nextState
+   }
     
     render(){
       let placeholderComponent = (this.props.placeholderComponent)

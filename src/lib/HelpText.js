@@ -7,6 +7,11 @@ import React from 'react';
 import { View, StyleSheet, Text} from 'react-native';
 
 export class HelpText extends React.Component{
+  
+  shouldComponentUpdate(nextProps, nextState) {
+    return this.props !== nextProps || this.state !== nextState
+  }
+
   render(){
     if(!this.props.text) return null;
     return (
