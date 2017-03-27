@@ -42,10 +42,6 @@ export class Form extends React.Component{
     return res.join(' ');
   }
 
-    shouldComponentUpdate(nextProps, nextState) {
-    return this.props !== nextProps || this.state !== nextState
-  }
-
   render(){
     let wrappedChildren = [];
 
