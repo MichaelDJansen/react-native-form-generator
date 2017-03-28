@@ -174,6 +174,8 @@ export class InputComponent extends React.Component{
             {...this.props}
             ref='inputBox'
             keyboardType = {this.props.keyboardType}
+            underlineColorAndroid={this.props.underlineColorAndroid}
+            autoFocus={false}
             style={[
                 this.props.inputStyle,
                 {height: this.state.inputHeight}
