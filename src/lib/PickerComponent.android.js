@@ -71,7 +71,7 @@ var PickerItem = Picker.Item;
           <Text style={this.props.labelStyle}>{this.props.label}</Text>
             <Picker ref='picker'
               {...this.props.pickerProps}
-              selectedValue={this.state.value}
+              selectedValue={this.props.noChange ? null : this.state.value}
               onValueChange={this.handleValueChange.bind(this)}
               >
               {Object.keys(this.props.options).map((value) => (
