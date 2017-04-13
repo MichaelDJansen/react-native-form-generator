@@ -76,7 +76,7 @@ import {Field} from './Field';
           {placeholderComponent}
           <View style={[formStyles.alignRight, formStyles.horizontalContainer]}>
             <Text style={[formStyles.fieldValue,this.props.valueStyle ]}>{
-            (this.state.date)?this.state.date.toLocaleDateString():""
+            (this.state.date)?this.props.dateTimeFormat(this.state.date):""
           }</Text>
 
 
