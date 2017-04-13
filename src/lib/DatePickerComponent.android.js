@@ -25,13 +25,13 @@ import {Field} from './Field';
 
     handleValueChange(date){
 
-      this.setState({date:date});
+      if ((this.props.noDateChange == undefined || this.props.noDateChange == null) || !this.props.noDateChange) this.setState({date:date});
 
       if(this.props.onChange)      this.props.onChange((this.props.prettyPrint)?this.props.dateTimeFormat(date):date);
       if(this.props.onValueChange) this.props.onValueChange(date);
     }
     setDate(date){
-      this.setState({date:date});
+      if ((this.props.noDateChange == undefined || this.props.noDateChange == null) || !this.props.noDateChange) this.setState({date:date});
       if(this.props.onChange)      this.props.onChange((this.props.prettyPrint)?this.props.dateTimeFormat(date):date);
       if(this.props.onValueChange) this.props.onValueChange(date);
     }
@@ -59,7 +59,7 @@ import {Field} from './Field';
   shouldComponentUpdate(nextProps, nextState) {
     return this.props !== nextProps || this.state !== nextState
    }
-    
+
     render(){
       let placeholderComponent = (this.props.placeholderComponent)
                         ? this.props.placeholderComponent
@@ -87,7 +87,7 @@ import {Field} from './Field';
         {(this.state.isPickerVisible)?
           <DatePickerAndroid
             {...this.props}
-           date={this.state.date || new Date()}
+           date={this.props.noDateChange ? null : this.state.date || new Date()}
 
            onDateChange={this.handleValueChange.bind(this)}
          />
