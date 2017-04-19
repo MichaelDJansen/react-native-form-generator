@@ -27,8 +27,7 @@ import {Field} from './Field';
 
       if ((this.props.noDateChange == undefined || this.props.noDateChange == null) || !this.props.noDateChange) this.setState({date:date});
 
-      if(this.props.onChange)      this.props.onChange((this.props.prettyPrint)?this.props.dateTimeFormat(date):date,
-                                                          (this.props.prettyPrint)?this.props.dateTimeFormat(this.props.date):this.props.date);
+      if(this.props.onChange)      this.props.onChange((this.props.prettyPrint)?this.props.dateTimeFormat(date):date,this.props.date);
       if(this.props.onValueChange) this.props.onValueChange(date, this.props.date);
     }
     setDate(date){
