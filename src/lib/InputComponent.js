@@ -37,6 +37,11 @@ export class InputComponent extends React.Component{
     this.handleFieldPress = this.handleFieldPress.bind(this)
     this._scrollToInput = this._scrollToInput.bind(this)
   }
+  componentWillReceiveProps(nextProps){
+    this.setState({
+      value:nextProps.value
+    })
+  }
 
   setValue(value){
     this.setState({value:value});
@@ -47,7 +52,7 @@ export class InputComponent extends React.Component{
     this.refs.inputBox.focus()
   }
   triggerValidation() {
-    this.setState({isValid:this.validate(this.state.value)});
+    this.setState({isValid:this.validate(this.props.value)});
   }
   validate(value){
     let validationResult;
@@ -184,7 +189,7 @@ export class InputComponent extends React.Component{
             onChange={this.handleChange}
             onFocus={this._scrollToInput}
             placeholder={this.props.placeholder}
-            value={this.state.value}
+            value={this.props.value}
             width={this.state.width-this.state.labelWidth
                 -((this.props.iconRight)?this.props.iconRight.props.size:0)
                 -((this.props.iconLeft)?this.props.iconLeft.props.size:0)
