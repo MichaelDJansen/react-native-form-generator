@@ -144,6 +144,12 @@ export class InputComponent extends React.Component{
     return this.props !== nextProps || this.state !== nextState
   }
 
+  componentWillReceiveProps(nextProps){
+    this.setState({
+      value:nextProps.value
+    })
+  }
+
   render(){
  // style={[formStyles.fieldContainer,
  //     formStyles.horizontalContainer,

@@ -59,7 +59,12 @@ export class PickerComponent extends React.Component{
       shouldComponentUpdate(nextProps, nextState) {
     return this.props !== nextProps || this.state !== nextState
   }
-  
+  componentWillReceiveProps(nextProps){
+    this.setState({
+      value:nextProps.value
+    })
+  }
+
     render(){
       //
       // if (this.state.isMultipleSelect){

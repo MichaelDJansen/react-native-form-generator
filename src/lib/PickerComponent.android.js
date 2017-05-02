@@ -57,6 +57,11 @@ var PickerItem = Picker.Item;
    shouldComponentUpdate(nextProps, nextState) {
     return this.props !== nextProps || this.state !== nextState
    }
+   componentWillReceiveProps(nextProps){
+     this.setState({
+       value:nextProps.value
+     })
+   }
     render(){
 
       return(<View><Field
