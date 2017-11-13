@@ -1,6 +1,8 @@
 'use strict';
 
 import React from 'react';
+import PropTypes from 'prop-types'
+
 import ReactNative from 'react-native';
 let { View, StyleSheet, TextInput, Text, Picker} = ReactNative;
 import {Field} from '../lib/Field';
@@ -163,7 +165,7 @@ export class PickerComponent extends React.Component{
   }
 
   PickerComponent.propTypes = {
-    pickerWrapper: React.PropTypes.element,
+    pickerWrapper: PropTypes.element,
   }
 
   PickerComponent.defaultProps = {

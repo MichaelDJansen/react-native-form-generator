@@ -1,6 +1,7 @@
 'use strict';
 
 import React from 'react';
+import PropTypes from 'prop-types'
 let { View, StyleSheet, Text} = require('react-native');
 import {Field} from './Field';
 
