@@ -50,8 +50,3 @@ export class LinkComponent extends React.Component{
 }
 
 }
-
-LinkComponent.propTypes = {
-  labelStyle: Text.propTypes.style,
-  containerStyle: View.propTypes.style
-}

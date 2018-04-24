@@ -213,9 +213,3 @@ export class InputComponent extends React.Component{
 //   multiline: React.PropTypes.bool,
 //   placeholder:React.PropTypes.string,
 // }
-
-InputComponent.propTypes = {
-  labelStyle: Text.propTypes.style,
-  inputStyle: TextInput.propTypes.style,
-  containerStyle: View.propTypes.style
-}

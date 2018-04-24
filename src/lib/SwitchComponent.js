@@ -55,12 +55,6 @@ export class SwitchComponent extends React.Component{
 
 }
 
-SwitchComponent.propTypes = {
-  labelStyle: Text.propTypes.style,
-  containerStyle: View.propTypes.style,
-  switchStyle: Switch.propTypes.style
-}
-
 
   let formStyles = StyleSheet.create({
     form:{

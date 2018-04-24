@@ -19,12 +19,6 @@ export class Separator extends React.Component{
   }
 }
 
-Separator.propTypes = {
-  labelStyle: Text.propTypes.style,
-  containerStyle: View.propTypes.style
-}
-
-
   let formStyles = StyleSheet.create({
     form:{
 
