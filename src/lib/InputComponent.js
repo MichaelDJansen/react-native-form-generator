@@ -192,11 +192,12 @@ export class InputComponent extends React.Component{
             onFocus={this._scrollToInput}
             placeholder={this.props.placeholder}
             value={this.state.value}
-            width={this.state.width-this.state.labelWidth
-                -((this.props.iconRight)?this.props.iconRight.props.size:0)
-                -((this.props.iconLeft)?this.props.iconLeft.props.size:0)
-              }
-
+            width={
+                (this.state.width ? this.state.width : 0 )
+              - (this.state.labelWidth ? this.state.labelWidth : 0 )
+              - (this.props.iconRight ? this.props.iconRight.props.size : 0 )
+              - (this.props.iconLeft ? this.props.iconLeft.props.size : 0 )
+            }
             />
           {(this.props.iconRight)
               ? this.props.iconRight
